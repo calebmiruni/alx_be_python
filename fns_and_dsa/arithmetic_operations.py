@@ -1,30 +1,24 @@
-def display_menu():
-    print("Shopping List Manager")
-    print("1. Add Item")
-    print("2. Remove Item")
-    print("3. View List")
-    print("4. Exit")
+def perform_operation(num1: float, num2: float, operation: str) -> float:
+    """
+    Perform basic arithmetic operations based on the provided operation type.
 
-def main():
-    shopping_list = []
-    while True:
-        display_menu()
-        choice = input("Enter your choice: ")
+    Parameters:
+    num1 (float): The first number.
+    num2 (float): The second number.
+    operation (str): The arithmetic operation ('add', 'subtract', 'multiply', 'divide').
 
-        if choice == '1':
-            # Prompt for and add an item
-            pass
-        elif choice == '2':
-            # Prompt for and remove an item
-            pass
-        elif choice == '3':
-            # Display the shopping list
-            pass
-        elif choice == '4':
-            print("Goodbye!")
-            break
-        else:
-            print("Invalid choice. Please try again.")
-
-if __name__ == "__main__":
-    main()
+    Returns:
+    float or str: The result of the operation or an error message if the operation is invalid.
+    """
+    if operation == 'add':
+        return num1 + num2
+    elif operation == 'subtract':
+        return num1 - num2
+    elif operation == 'multiply':
+        return num1 * num2
+    elif operation == 'divide':
+        if num2 == 0:
+            return "Error: Division by zero is not allowed."
+        return num1 / num2
+    else:
+        return "Error: Invalid operation. Choose from 'add', 'subtract', 'multiply', or 'divide'."
