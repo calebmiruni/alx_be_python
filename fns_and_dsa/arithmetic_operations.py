@@ -1,4 +1,3 @@
-
 def perform_operation(num1: float, num2: float, operation: str) -> float:
     """
     Perform basic arithmetic operations based on the provided operation type.
